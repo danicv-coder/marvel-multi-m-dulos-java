@@ -21,6 +21,7 @@
     <!--MODULES-->
     <modules>
         <module>marvel-service</module>
+        <module>marvel-api</module>
     </modules>
     <dependencyManagement>
         <dependencies>

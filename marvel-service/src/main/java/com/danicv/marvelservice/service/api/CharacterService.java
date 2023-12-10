@@ -1,4 +1,4 @@
-package com.danicv.marvelservice.service.api.impl;
+package com.danicv.marvelservice.service.api;
 
 import com.danicv.marvelservice.model.Character;
 
