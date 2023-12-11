@@ -1,5 +1,6 @@
-package com.danicv.marvelapi.controller.controller;
+package com.danicv.marvelapi.controller;
 
+import com.danicv.marvelapi.aspect.Audit;
 import com.danicv.marvelservice.model.Character;
 import com.danicv.marvelservice.service.api.CharacterService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,11 +20,13 @@ public class CharacterController {
     }
 
     @GetMapping(value = "/characters", produces = "application/json")
+    @Audit
     public Character getCharacter() {
         return characterService.getCharacter();
     }
 
     @GetMapping(value = "/characters/{characterId}")
+    @Audit
     public Character getCharacterById(@PathVariable String characterId) {
         return characterService.getCharacterId(characterId);
     }
